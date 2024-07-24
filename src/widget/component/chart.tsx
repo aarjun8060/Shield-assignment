@@ -1,7 +1,13 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { 
+    BarChart, 
+    Bar, XAxis, 
+    YAxis, 
+    Tooltip, 
+    Legend, 
+    ResponsiveContainer 
+} from 'recharts';
 import { format } from 'date-fns';
 
-// Define the type for your data
 type DataPoint = {
   date: string;
   numComments: number;
@@ -27,13 +33,13 @@ const Chart: React.FC<ChartProps> = ({ data }) => {
   })):[]
 
   return (
-    <div style={{ width: '100%', height: 400 }}> 
+    <div style={{ width: '100%', height: 200 ,marginLeft:"-40px"}}> 
       <ResponsiveContainer>
         <BarChart 
-        data={formattedData}
-        width={500}
-        height={200}
-        barSize={15}
+          data={formattedData}
+          width={600}
+          height={200}
+          barSize={10}
         >
           <XAxis dataKey="date" axisLine={false} tickLine={false}/>
           <YAxis  stroke='none' />
