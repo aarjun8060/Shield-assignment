@@ -1,7 +1,6 @@
 'use client';
 import { endOfDay, startOfDay, subDays } from 'date-fns';
 import Image from 'next/image';
-import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { EngagementData, EngagementTotals } from './api/engagements/route';
 import Chart from '@/widget/component/chart';
