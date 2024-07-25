@@ -9,7 +9,6 @@ export default function Home() {
   const [totals, setTotals] = useState<EngagementTotals | null>(null);
   const [data, setData] = useState<EngagementData[] | null>(null);
 
-  const searchParams = useSearchParams();
   const start_date = searchParams.get('start_date');
   const end_date = searchParams.get('end_date');
 
