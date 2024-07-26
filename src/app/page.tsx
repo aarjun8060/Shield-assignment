@@ -9,14 +9,9 @@ export default function Home() {
   const [totals, setTotals] = useState<EngagementTotals | null>(null);
   const [data, setData] = useState<EngagementData[] | null>(null);
 
-  const start_date = searchParams.get('start_date');
-  const end_date = searchParams.get('end_date');
-
   useEffect(() => {
-    const endDate = end_date ? new Date(end_date) : endOfDay(new Date());
-    const startDate = start_date
-      ? new Date(start_date)
-      : startOfDay(subDays(endDate, 30));
+    const endDate = endOfDay(new Date());
+    const startDate = startOfDay(subDays(endDate, 30));
 
     const fetchData = async () => {
       const response = await fetch(
