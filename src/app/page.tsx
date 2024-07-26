@@ -23,7 +23,7 @@ export default function Home() {
     };
 
     fetchData();
-  }, [ end_date]);
+  }, []);
 
   return (
     <main className='main'>
